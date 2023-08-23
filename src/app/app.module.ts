@@ -14,9 +14,20 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './views/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CardFilmComponent } from './components/template/card-film/card-film.component';
+import { ListFilmsComponent } from './views/list-films/list-films.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavComponent,
+    HomeComponent,
+    CardFilmComponent,
+    ListFilmsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,6 +36,7 @@ import { HomeComponent } from './views/home/home.component';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
