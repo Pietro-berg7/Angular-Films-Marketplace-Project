@@ -26,6 +26,7 @@ import { CardFilmComponent } from './components/template/card-film/card-film.com
 import { ListFilmsComponent } from './views/list-films/list-films.component';
 import { SelectButtonComponent } from './components/template/select-button/select-button.component';
 import { CheckoutComponent } from './views/checkout/checkout.component';
+import { AboutComponent } from './views/about/about.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CheckoutComponent } from './views/checkout/checkout.component';
     ListFilmsComponent,
     SelectButtonComponent,
     CheckoutComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

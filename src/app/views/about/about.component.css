@@ -1,0 +1,33 @@
+.card-header-image {
+  background-image: url(https://avatars.githubusercontent.com/u/105403460?v=4);
+  background-size: cover;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.home {
+  margin: 10px;
+  background-color: #fff;
+}
+
+.home .title {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-left: 15px;
+}
+
+.home .subtitle {
+  font-size: 1rem;
+  margin-left: 15px;
+  opacity: 0.7;
+}
+
+.mat-card-content {
+  text-align: left;
+}
