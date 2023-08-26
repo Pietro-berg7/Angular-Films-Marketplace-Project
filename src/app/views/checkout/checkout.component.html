@@ -4,7 +4,7 @@
   </mat-card-title>
   <mat-card class="mat-card">
     <h2>{{ listSelectedFilms.length }} selected items</h2>
-    <h3>Total cost: {{ totalPrice }}</h3>
+    <h3>Total cost: {{ totalPrice | currency : "BRL" }}</h3>
     <mat-card
       class="mat-card-film"
       [class.isValid]="disabled === true"

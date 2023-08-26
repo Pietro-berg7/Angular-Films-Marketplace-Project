@@ -13,7 +13,7 @@
         atque, ea, rerum maxime nihil eos ullam laboriosam a minima accusantium
         corrupti quo maiores perspiciatis. Vero molestiae amet odit in.
       </p>
-      <p class="card-description">{{ film.price }}</p>
+      <p class="card-description">{{ film.price | currency : "BRL" }}</p>
       <app-select-button (click)="selectFilm(film)"></app-select-button>
     </mat-card-content>
   </mat-card>
