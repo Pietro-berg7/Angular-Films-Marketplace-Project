@@ -19,6 +19,8 @@ export class ListFilmsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.checkoutService.totalPrice = 0;
+    this.checkoutService.listSelectedFilms = [];
     this.checkoutService.getListFilms().subscribe((film) => {
       this.listFilms = film;
     });

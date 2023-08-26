@@ -47,7 +47,7 @@
 
 .input-form {
   width: 300px;
-  margin: 10px 15px;
+  margin: 10px 0;
 }
 
 .mat-pay {
@@ -63,4 +63,10 @@
 
 .selected {
   margin: 0 15pxp;
+}
+
+.visibility {
+  height: 24px;
+  padding: 0;
+  margin-right: -10px;
 }

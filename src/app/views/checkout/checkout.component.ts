@@ -14,6 +14,7 @@ export class CheckoutComponent implements OnInit {
   disabled: boolean = false;
   hide: boolean = true;
   form: any;
+  client: any = {};
 
   constructor(
     private checkoutService: CheckoutService,
@@ -21,14 +22,29 @@ export class CheckoutComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.form = document.querySelector('#form');
+    this.form.addEventListener('click', (event: any) => {
+      event.preventDefault();
+    });
     this.totalPrice = this.checkoutService.totalPrice;
     this.listSelectedFilms = this.checkoutService.listSelectedFilms;
     this.toggleButton();
   }
 
   payment(): void {
-    this.checkoutService.showMessage('Payment!', true);
-    this.router.navigate(['../list-films']);
+    if (
+      this.client.address === undefined ||
+      this.client.name === undefined ||
+      this.client.password === undefined
+    ) {
+      this.checkoutService.showMessage('Please enter a valid data', false);
+    } else {
+      this.checkoutService.showMessage(
+        `Payment is successfully, good choice! Confirmed order: to ${this.client.address} by ${this.client.name}`,
+        true
+      );
+      this.router.navigate(['../list-films']);
+    }
   }
 
   cancel(): void {

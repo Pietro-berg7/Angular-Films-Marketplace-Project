@@ -37,7 +37,7 @@ export class CheckoutService {
 
   showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, 'close', {
-      duration: 3000,
+      duration: 10000,
       horizontalPosition: 'right',
       verticalPosition: 'top',
       panelClass: isError ? ['success'] : ['error'],
