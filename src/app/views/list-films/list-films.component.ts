@@ -3,6 +3,8 @@ import { CheckoutService } from '../checkout/checkout.service';
 import { Film } from './film.model';
 import { Router } from '@angular/router';
 
+import { filmsMock } from 'src/app/utils/films.mock';
+
 @Component({
   selector: 'app-list-films',
   templateUrl: './list-films.component.html',
@@ -24,6 +26,10 @@ export class ListFilmsComponent implements OnInit {
     this.checkoutService.getListFilms().subscribe((film) => {
       this.listFilms = film;
     });
+
+    if (this.listFilms.length === 0) {
+      this.listFilms = filmsMock;
+    }
   }
 
   toggleBadgeVisibility() {
